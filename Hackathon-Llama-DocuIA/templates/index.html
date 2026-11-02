@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuIA - Asistente Inteligente con Llama y RAG</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>DocuIA 🦙</h1>
+        <p>Asistente Inteligente basado en Llama, RAG y FastAPI para el Hackathon</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Sección 1: Cargar PDF -->
+        <div class="card">
+            <h2>1. Cargar Documento PDF</h2>
+            <input type="file" id="pdfFile" accept=".pdf">
+            <button id="uploadButton">Subir PDF</button>
+            <div id="uploadMessage"></div>
+        </div>
+
+        <!-- Sección 2: Documentos Disponibles -->
+        <div class="card">
+            <h2>2. Documentos en el Sistema</h2>
+            <button id="refreshButton">Actualizar Lista</button>
+            <div id="documentList" style="margin-top: 15px;">
+                Cargando documentos...
+            </div>
+        </div>
+
+        <!-- Sección 3: Hacer Preguntas al Asistente -->
+        <div class="card">
+            <h2>3. Consultar al Asistente (RAG + Llama)</h2>
+            <textarea id="questionInput" placeholder="Escribe tu pregunta sobre los documentos cargados..."></textarea>
+            <button id="askButton">Preguntar</button>
+            
+            <h3 style="margin-top: 20px;">Respuesta:</h3>
+            <div id="answer">La respuesta aparecerá aquí...</div>
+
+            <h3 style="margin-top: 20px;">Fuentes / Contexto:</h3>
+            <div id="sources"></div>
+        </div>
+
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
